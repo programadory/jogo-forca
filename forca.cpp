@@ -67,7 +67,7 @@ int main(){
     " |   \n",  
     " |  \n", 
     " |      \n", 
-    "---     \n"  
+    "---"  
     
   };
   
@@ -93,27 +93,25 @@ int main(){
       
       /* Drawing hangman */
       
-      for(int i=0; i<9; i++){ //Desenho do boneco vazio.
+      for(int i=0; i<8; i++){ //Desenho do boneco vazio.
         cout << stickman_overwrite[i];
       }
+ 
+      /* Printing line animation */ 
+      
+      cout << stickman_overwrite[8] << " " << word_overwrite << "\n";
       
       /* Win or Lose statements */
       
       if(lt==word_sz){
-        cout << "VOCE VENCEU O JOGO!\n\n";
+        cout << "\nVOCE VENCEU O JOGO!\n\n";
         break;
       }
       
       if(life==0){
-        cout << "VOCE PERDEU!\n\n";
+        cout << "\nVOCE PERDEU!\n\n";
         break;
       }
-      
-      /* Printing line animation */ 
-      
-      cout << "\n\n\n\n\n\n\n\n" << word_overwrite << "\n";
-      
-      
       
       /* User hangman game input */
       
